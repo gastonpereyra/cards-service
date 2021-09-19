@@ -40,6 +40,7 @@
     "vercel": "^23.1.2"
   },
   "dependencies": {
+    "handlebars": "^4.7.7",
     "vercel-serverless-api": "^1.1.0"
   }
 }
