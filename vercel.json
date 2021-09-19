@@ -1,0 +1,23 @@
+{
+    "routes": [
+        {
+            "src": "/api/message",
+            "methods": ["GET"],
+            "dest": "/api/message/list"
+        },
+        {
+            "src": "/api/message/(?<id>[^/]+)",
+            "methods": ["GET"],
+            "dest": "/api/message/get?pathIds.id=$id"
+        },
+        {
+            "src": "/",
+            "methods": ["GET"],
+            "dest": "/api/index"
+        },
+        {
+            "src": "/.*",
+            "dest": "/api/not-found/message"
+        }
+    ]
+}
