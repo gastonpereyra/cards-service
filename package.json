@@ -1,7 +1,7 @@
 {
-  "name": "{serviceName}-service",
+  "name": "cards-service",
   "version": "1.0.0",
-  "description": "{serviceDescription}",
+  "description": "For create Cards as SVG-Images to use in the Github Profile",
   "main": "index.js",
   "scripts": {
     "coverage": "nyc npm test",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gastonpereyra/{serviceName}-service.git"
+    "url": "git+https://github.com/gastonpereyra/cards-service.git"
   },
   "keywords": [
     "service",
@@ -27,9 +27,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gastonpereyra/{serviceName}-service/issues/new?labels=bug&template=bug.md&title=[BUG]"
+    "url": "https://github.com/gastonpereyra/cards-service/issues/new?labels=bug&template=bug.md&title=[BUG]"
   },
-  "homepage": "https://github.com/gastonpereyra/{serviceName}-service#readme",
+  "homepage": "https://github.com/gastonpereyra/cards-service#readme",
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^13.2.0",
