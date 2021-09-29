@@ -4,8 +4,7 @@
     "coverage/",
     ".eslintrc.js",
     "actions/",
-    "api/not-found/message.js",
-    "api/index.js",
+    "api/*",
     "config/"
   ],
   "extension": [

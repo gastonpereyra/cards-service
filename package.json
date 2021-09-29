@@ -18,7 +18,9 @@
   },
   "keywords": [
     "service",
-    "vercel"
+    "vercel",
+    "github",
+    "svg"
   ],
   "author": {
     "name": "Gastón Pereyra",
@@ -31,13 +33,14 @@
   },
   "homepage": "https://github.com/gastonpereyra/cards-service#readme",
   "devDependencies": {
-    "eslint": "^7.25.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.24.2",
     "mocha": "^9.1.1",
     "nyc": "^15.1.0",
     "sinon": "^11.1.2",
-    "vercel": "^23.1.2"
+    "vercel": "^23.1.2",
+    "vercel-serverless-tests": "^1.0.1"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
