@@ -1,14 +1,9 @@
 {
     "routes": [
         {
-            "src": "/api/message",
+            "src": "/api/user/(?<username>[^/]+)",
             "methods": ["GET"],
-            "dest": "/api/message/list"
-        },
-        {
-            "src": "/api/message/(?<id>[^/]+)",
-            "methods": ["GET"],
-            "dest": "/api/message/get?pathIds.id=$id"
+            "dest": "/api/user/get?pathIds.username=$username"
         },
         {
             "src": "/",
