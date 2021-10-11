@@ -54,7 +54,7 @@ module.exports = class UserGetApi extends API {
 		try {
 
 			const [userStats, totalCommits] = await Promise.all([
-				UserStatFetcher.get(this.pathIds.username),
+				UserStatFetcher.get(this.pathIds),
 				includeAlCommits && CommitsFetcher.get(this.pathIds.username)
 			]);
 
