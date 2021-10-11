@@ -19,7 +19,7 @@ module.exports = class GithubFetcherBase {
 		return `bearer ${process.env.GITHUB_TOKEN}`;
 	}
 
-	static async get(username) {
+	static async get(variables) {
 
 		const invalidRequest = this.validateRequest();
 
@@ -27,7 +27,7 @@ module.exports = class GithubFetcherBase {
 			return invalidRequest;
 
 		try {
-			const response = await axios(this.formatRequest(username));
+			const response = await axios(this.formatRequest(variables));
 
 			const invalidResponse = this.validateResponse(response);
 
@@ -63,7 +63,7 @@ module.exports = class GithubFetcherBase {
 			return { error: 'Invalid Request. Authorization is Missing' };
 	}
 
-	static formatRequest(username) {
+	static formatRequest(variables) {
 		return {
 			url: this.url,
 			method: this.method,
@@ -72,10 +72,14 @@ module.exports = class GithubFetcherBase {
 			},
 			data: {
 				query: this.query,
-				variables: {
-					login: username
-				}
+				...(variables && Object.keys(variables)) && { variables: this.getVariables(variables) }
 			}
+		};
+	}
+
+	static getVariables({ username }) {
+		return {
+			login: username
 		};
 	}
 
