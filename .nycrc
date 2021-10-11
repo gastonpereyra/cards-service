@@ -5,7 +5,9 @@
     ".eslintrc.js",
     "actions/",
     "api/*",
-    "config/"
+    "config/",
+    "src/lib/logger.js",
+    "src/*"
   ],
   "extension": [
     ".js"
