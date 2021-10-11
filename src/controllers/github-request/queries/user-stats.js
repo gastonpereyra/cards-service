@@ -5,6 +5,7 @@ query userInfo($login: String!) {
   user(login: $login) {
 	name
 	login
+	createdAt
 	contributionsCollection {
 	  totalCommitContributions
 	  restrictedContributionsCount
