@@ -6,7 +6,8 @@
     "actions/",
     "api/*",
     "config/",
-    "src/lib/logger.js"
+    "src/lib/logger.js",
+    "src/*"
   ],
   "extension": [
     ".js"

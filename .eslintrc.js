@@ -36,6 +36,7 @@ module.exports = {
 		'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/tests/**/*.js'] }],
 		'no-console': 0,
 		'no-bitwise': 0,
+		'import/extensions': 0,
 
 		curly: ['error', 'multi-or-nest'],
 

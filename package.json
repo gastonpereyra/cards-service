@@ -46,6 +46,7 @@
     "axios": "^0.21.4",
     "handlebars": "^4.7.7",
     "superstruct": "0.6.2",
-    "vercel-serverless-api": "^1.1.0"
+    "vercel-serverless-api": "^1.1.0",
+    "word-wrap": "^1.2.3"
   }
 }
