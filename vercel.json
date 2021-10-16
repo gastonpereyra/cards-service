@@ -11,6 +11,11 @@
             "dest": "/api/user/repository/get?pathIds.username=$username&pathIds.repositoryName=$repositoryName"
         },
         {
+            "src": "/api/user/(?<username>[^/]+)/languages",
+            "methods": ["GET"],
+            "dest": "/api/user/languages/get?pathIds.username=$username"
+        },
+        {
             "src": "/api/organization/(?<username>[^/]+)/repository/(?<repositoryName>[^/]+)",
             "methods": ["GET"],
             "dest": "/api/organization/repository/get?pathIds.username=$username&pathIds.repositoryName=$repositoryName"
