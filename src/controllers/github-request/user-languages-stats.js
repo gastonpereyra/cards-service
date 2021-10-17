@@ -2,9 +2,9 @@
 
 const Base = require('./base');
 
-const LANGUAGE_STAT_QUERY = require('./queries/languages-stat');
+const LANGUAGE_STAT_QUERY = require('./queries/user-languages-stat');
 
-module.exports = class LanguagesStatFetcher extends Base {
+module.exports = class UserLanguagesStatFetcher extends Base {
 
 	static get query() {
 		return LANGUAGE_STAT_QUERY;
