@@ -26,6 +26,11 @@
             "dest": "/api/organization/repository/get?pathIds.username=$username&pathIds.repositoryName=$repositoryName"
         },
         {
+            "src": "/api/organization/(?<username>[^/]+)/languages",
+            "methods": ["GET"],
+            "dest": "/api/organization/languages/get?pathIds.username=$username"
+        },
+        {
             "src": "/",
             "methods": ["GET"],
             "dest": "/api/index"
