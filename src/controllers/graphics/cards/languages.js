@@ -110,7 +110,10 @@ module.exports = class LanguageCard extends Card {
 
 		const { bar, width } = this.createCompactProgressBar(totalSize);
 
-		const columns = Math.floor(width / COLUMN_WIDTH);
+		let columns = Math.floor(width / COLUMN_WIDTH);
+
+		if(columns * COLUMN_WIDTH > this.width)
+			columns--;
 
 		this.height += 22.5 + Math.ceil(this.languages.length / columns + 1) * this.lineHeight;
 

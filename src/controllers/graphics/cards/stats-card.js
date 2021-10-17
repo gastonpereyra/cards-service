@@ -12,19 +12,11 @@ const YEAR_IN_MILISECONDS = 1000 * 60 * 60 * 24 * 360;
 
 module.exports = class StatsCard extends Card {
 
-	static get statsNames() {
-		return ['stars', 'commits', 'issues', 'prs', 'contributions'];
-	}
-
 	constructor(
 		{
-			name = 'User',
-			totalStars = 0,
-			totalCommits = 0,
-			totalIssues = 0,
-			totalPRs = 0,
-			contributedTo = 0,
-			miliSecondsActive = 0
+			name = 'Octocat',
+			miliSecondsActive = 0,
+			...stats
 		} = {},
 		{
 			hide = [],
@@ -35,10 +27,11 @@ module.exports = class StatsCard extends Card {
 			lineHeight = 25,
 			width = 460
 		} = {},
-		colors = {}
+		colors = {},
+		maxStats = 5
 	) {
 
-		const height = Math.max(45 + (6 - hide.length) * lineHeight, hideYear ? 0 : 150);
+		const height = Math.max(45 + ((maxStats + 1) - hide.length) * lineHeight, hideYear ? 0 : 150);
 		const apostrophe = ['x', 's'].includes(name.slice(-1)) ? '' : 's';
 
 		super({
@@ -53,13 +46,7 @@ module.exports = class StatsCard extends Card {
 		this.hide = hide;
 		this.showIcons = showIcons;
 
-		this.totals = {
-			stars: totalStars,
-			commits: totalCommits,
-			issues: totalIssues,
-			prs: totalPRs,
-			contributions: contributedTo
-		};
+		this.totals = this.getTotals?.(stats) || {};
 
 		this.yearsActive = miliSecondsActive / YEAR_IN_MILISECONDS;
 
@@ -76,36 +63,34 @@ module.exports = class StatsCard extends Card {
 		this.setCSS(cssStyles);
 	}
 
-	getStyles({
-		titleColor, textColor, iconColor, showIcons, progress
-	}) {
+	getStyles({ showIcons, progress }) {
 		return `
       .stat {
-        font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+        font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${this.colors.textColor};
       }
       .stagger {
         opacity: 0;
         animation: fadeInAnimation 0.3s ease-in-out forwards;
       }
       .rank-text {
-        font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${titleColor}; 
+        font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${this.colors.titleColor}; 
         animation: scaleInAnimation 0.3s ease-in-out forwards;
       }
       
       .bold { font-weight: 700 }
       .icon {
-        fill: ${iconColor};
+        fill: ${this.colors.iconColor};
         display: ${showIcons ? 'block' : 'none'};
       }
       
       .rank-circle-rim {
-        stroke: ${iconColor};
+        stroke: ${this.colors.iconColor};
         fill: none;
         stroke-width: 6;
         opacity: 0.2;
       }
       .rank-circle {
-        stroke: ${iconColor};
+        stroke: ${this.colors.iconColor};
         stroke-dasharray: 250;
         fill: none;
         stroke-width: 6;
@@ -168,7 +153,7 @@ module.exports = class StatsCard extends Card {
 		return Object.entries(this.totals)
 			.filter(([key]) => !this.hide.includes(key))
 			.map(([key, value], index) => this.createTextNode({
-				icon: icons[key],
+				icon: icons[key] || icons.icon,
 				label: `Total ${key}`,
 				value,
 				id: key
@@ -197,13 +182,12 @@ module.exports = class StatsCard extends Card {
 	}
 
 	getSvgIcon(icon) {
-		return this.showIcons
-			? `
+		return !this.showIcons
+			? '' : `
       <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
         ${icon}
       </svg>
-    `
-			: '';
+    `;
 	}
 
 	generateCircule() {
