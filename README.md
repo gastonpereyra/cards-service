@@ -116,6 +116,31 @@ For create Cards as SVG-Images to use in the Github Profile
 
 </details>
 
+#### Language Ranking 🔝
+
+* 🔗 `/api/organization/{username}/languages`
+
+![imagen](https://user-images.githubusercontent.com/39351850/137647202-d777103a-3cb2-4b1a-84de-9a50a4d0e594.png)
+
+<details>
+
+* Path Paramenters 🆔
+    * `username`: _string_
+* Query Parameters ❔
+    * `width` : _number_
+    * `lineHeigth`: _number_
+    * `hideTitle` : _true | false_
+    * `hideBorders`: _true | false_
+    * `hide` : _string_
+    * `isCompact`: _true | false_
+    * `theme` : _dark | light | error_
+    * `iconColor` : _string_
+    * `titleColor` : _string_
+    * `textColor` : _string_
+    * `backgroundColor` : _string_
+
+</details>
+
 #### Repositories 📍
 
 * 🔗 `/api/organization/{username}/repository/{repositoryName}`
