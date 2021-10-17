@@ -6,6 +6,12 @@
 
 For create Cards as SVG-Images to use in the Github Profile
 
+## Wiki :book:
+
+In the Wiki of this project, there is more Details about APIs and its uses, it is in Spanish.
+
+➕ [INFO :es:](https://github.com/gastonpereyra/cards-service/wiki)
+
 ## API :telephone_receiver:
 
 * Base URL: `rgp-cards-service.vercel.app`
@@ -93,7 +99,7 @@ For create Cards as SVG-Images to use in the Github Profile
 
 * 🔗 `/api/organization/{username}`
 
-![imagen](https://user-images.githubusercontent.com/39351850/137608185-882b5406-5fc3-4f67-9202-4bc4a87043b3.png)
+![imagen](https://user-images.githubusercontent.com/39351850/137646524-e8266dec-8b52-448f-891e-71cfc1e79d75.png)
 
 <details>
 
@@ -145,7 +151,7 @@ For create Cards as SVG-Images to use in the Github Profile
 
 * 🔗 `/api/organization/{username}/repository/{repositoryName}`
 
-![imagen](https://user-images.githubusercontent.com/39351850/137646524-e8266dec-8b52-448f-891e-71cfc1e79d75.png)
+![imagen](https://user-images.githubusercontent.com/39351850/137608686-00c22be8-f0b8-4b65-b15f-2fd0ee40d9f5.png)
 
 <details>
 
@@ -165,12 +171,6 @@ For create Cards as SVG-Images to use in the Github Profile
     * `backgroundColor` : _string_
 
 </details>
-
-## Wiki :book:
-
-In the Wiki of this project, there is more Details about APIs and its uses, it is in Spanish.
-
-➕ [INFO :es:](https://github.com/gastonpereyra/cards-service/wiki)
 
 ## Found any Bug :bug: ?
 
