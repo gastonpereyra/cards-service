@@ -56,7 +56,7 @@ module.exports = class BaseStatApi extends API {
 
 	formatQueries() {
 		return {
-			hide: !this.filters.hide ? [] : this.filters.hide.split(',').filters(stat => this.StatsCard.statsNames.includes(stat)),
+			hide: !this.filters.hide ? [] : this.filters.hide.split(',').filter(stat => this.StatsCard.statsNames.includes(stat)),
 			hideTitle: this.filters.hideTitle ? this.filters.hideTitle === 'true' : false,
 			hideBorder: this.filters.hideBorder ? this.filters.hideBorder === 'true' : false,
 			hideYear: this.filters.hideYear ? this.filters.hideYear === 'true' : false,
