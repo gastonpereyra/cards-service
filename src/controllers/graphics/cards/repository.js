@@ -39,7 +39,7 @@ module.exports = class RepositoryStatsCard extends Card {
 
 		super({
 			title: showOwner ? nameWithOwner : name,
-			titlePrefixIcon: icons.contributions,
+			titlePrefixIcon: icons.repositories,
 			width,
 			height,
 			colors
