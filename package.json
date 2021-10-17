@@ -1,6 +1,6 @@
 {
   "name": "cards-service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "For create Cards as SVG-Images to use in the Github Profile",
   "main": "index.js",
   "scripts": {

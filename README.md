@@ -63,7 +63,7 @@ For create Cards as SVG-Images to use in the Github Profile
 
 </details>
 
-#### Repositorios 📍
+#### Repositories 📍
 
 * 🔗 `/api/user/{username}/repository/{repositoryName}`
 
@@ -89,11 +89,38 @@ For create Cards as SVG-Images to use in the Github Profile
 </details>
 
 ### Organization :busts_in_silhouette:
-#### Repositorios 📍
+#### Stats 📈
+
+* 🔗 `/api/organization/{username}`
+
+![imagen](https://user-images.githubusercontent.com/39351850/137608185-882b5406-5fc3-4f67-9202-4bc4a87043b3.png)
+
+<details>
+
+* Path Paramenters 🆔
+    * `username`: _string_
+* Query Parameters ❔
+    * `width` : _number_ 
+    * `lineHeigth`: _number_ 
+    * `hideTitle` : _true | false_
+    * `hideBorders`: _true | false_
+    * `hideYear`: _true | false_
+    * `hide` : _stars | members | teams | projects | packages | repositories_ 
+    * `showIcons`: _true | false_
+    * `includeAlCommits`: _true | false_
+    * `theme` : _dark | light | error_
+    * `iconColor` : _string_
+    * `titleColor` : _string_
+    * `textColor` : _string_
+    * `backgroundColor` : _string_
+
+</details>
+
+#### Repositories 📍
 
 * 🔗 `/api/organization/{username}/repository/{repositoryName}`
 
-![imagen](https://user-images.githubusercontent.com/39351850/137608686-00c22be8-f0b8-4b65-b15f-2fd0ee40d9f5.png)
+![imagen](https://user-images.githubusercontent.com/39351850/137646524-e8266dec-8b52-448f-891e-71cfc1e79d75.png)
 
 <details>
 
