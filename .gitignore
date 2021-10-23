@@ -71,3 +71,4 @@ typings/
 
 # Vercel Deploy
 .vercel
+vercel.json
