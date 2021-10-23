@@ -9,8 +9,9 @@
     "lint": "eslint lib/ tests/",
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
-    "start": "vercel dev",
-    "vercel-login": "vercel login --github"
+    "start": "npm run vercel-build; vercel dev",
+    "vercel-login": "vercel login --github",
+    "vercel-build": "node ./build.js"
   },
   "repository": {
     "type": "git",

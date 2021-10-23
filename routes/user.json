@@ -1,0 +1,17 @@
+[
+    {
+        "src": "/api/user/(?<username>[^/]+)",
+        "methods": ["GET"],
+        "dest": "/api/user/get?pathIds.username=$username"
+    },
+    {
+        "src": "/api/user/(?<username>[^/]+)/repository/(?<repositoryName>[^/]+)",
+        "methods": ["GET"],
+        "dest": "/api/user/repository/get?pathIds.username=$username&pathIds.repositoryName=$repositoryName"
+    },
+    {
+        "src": "/api/user/(?<username>[^/]+)/languages",
+        "methods": ["GET"],
+        "dest": "/api/user/languages/get?pathIds.username=$username"
+    }
+]
