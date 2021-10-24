@@ -11,7 +11,7 @@
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
     "start": "npm run vercel-build; vercel dev",
     "vercel-login": "vercel login --github",
-    "vercel-build": "npx vercel-serverless-routes@1.0.0-beta.3"
+    "vercel-build": "npx vercel-serverless-routes@1.0.0-beta.4"
   },
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     "handlebars": "^4.7.7",
     "superstruct": "0.6.2",
     "vercel-serverless-api": "^1.1.0",
-    "vercel-serverless-routes": "^1.0.0-beta.1",
+    "vercel-serverless-routes": "^1.0.0-beta.4",
     "word-wrap": "^1.2.3"
   }
 }
