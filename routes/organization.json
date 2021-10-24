@@ -1,17 +1,12 @@
 [
     {
-        "src": "/api/organization/(?<username>[^/]+)",
-        "methods": ["GET"],
-        "dest": "/api/organization/get?pathIds.username=$username"
+        "path": "/organization/{username}",
+        "method": "GET"
     },
     {
-        "src": "/api/organization/(?<username>[^/]+)/repository/(?<repositoryName>[^/]+)",
-        "methods": ["GET"],
-        "dest": "/api/organization/repository/get?pathIds.username=$username&pathIds.repositoryName=$repositoryName"
+        "path": "/organization/{username}/repository/{repositoryName}"
     },
     {
-        "src": "/api/organization/(?<username>[^/]+)/languages",
-        "methods": ["GET"],
-        "dest": "/api/organization/languages/get?pathIds.username=$username"
+        "path": "/organization/{username}/languages"
     }
 ]
