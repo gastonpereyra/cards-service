@@ -1,0 +1,12 @@
+[
+    {
+        "path": "/organization/{username}",
+        "method": "GET"
+    },
+    {
+        "path": "/organization/{username}/repository/{repositoryName}"
+    },
+    {
+        "path": "/organization/{username}/languages"
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "path": "/user/{username}"
+    },
+    {
+        "path": "/user/{username}/repository/{repositoryName}"
+    },
+    {
+        "path": "/user/{username}/languages"
+    }
+]

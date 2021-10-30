@@ -2,6 +2,14 @@
 
 const { handler } = require('vercel-serverless-api');
 
-const OrgRespositoryGetApi = require('../../../src/apis/organization/repository/get');
+const Base = require('../../../src/apis/repository/base');
+const StatFetcher = require('../../../src/controllers/github-request/organization-repository-stats');
 
-module.exports = async (...args) => handler(OrgRespositoryGetApi, ...args);
+class API extends Base {
+
+	static get fetcher() {
+		return StatFetcher;
+	}
+}
+
+module.exports = async (...args) => handler(API, ...args);

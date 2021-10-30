@@ -1,13 +1,6 @@
 {
-  "exclude": [
-    "tests/",
-    "coverage/",
-    ".eslintrc.js",
-    "actions/",
-    "api/*",
-    "config/",
-    "src/lib/logger.js",
-    "src/*"
+  "include": [
+    "/src"
   ],
   "extension": [
     ".js"
