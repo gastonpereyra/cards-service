@@ -1,6 +1,6 @@
 {
   "name": "cards-service",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "For create Cards as SVG-Images to use in the Github Profile",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,9 @@
     "lint": "eslint lib/ tests/",
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
-    "start": "npm run vercel-build; vercel dev",
+    "start": "npm run build-routes; vercel dev",
     "vercel-login": "vercel login --github",
-    "vercel-build": "npx vercel-serverless-routes@1.0.0-beta.4"
+    "build-routes": "npx vercel-serverless-routes@latest"
   },
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     "handlebars": "^4.7.7",
     "superstruct": "0.6.2",
     "vercel-serverless-api": "^1.1.0",
-    "vercel-serverless-routes": "^1.0.0-beta.5",
+    "vercel-serverless-routes": "^1.0.0-beta.8",
     "word-wrap": "^1.2.3"
   }
 }
