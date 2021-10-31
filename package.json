@@ -10,6 +10,7 @@
     "test": "export TEST_ENV=true; mocha -R Min --exit --recursive tests/",
     "test-ci": "nyc --reporter=lcov --reporter=text-summary mocha --exit --recursive tests/",
     "start": "npm run build-routes; vercel dev",
+    "start-docker": "npm run build-routes;vercel dev --listen $SERVICE_PORT --token $VERCEL_TOKEN",
     "vercel-login": "vercel login --github",
     "build-routes": "npx vercel-serverless-routes@latest"
   },

@@ -1,0 +1,26 @@
+version: '3.3'
+
+networks:
+  rgp-network:
+    external: true
+
+services:
+  service:
+    container_name: cards-service
+    image: node:14-alpine
+    working_dir: /var/www/rgp-service
+    volumes:
+      - .:/var/www/rgp-service
+    environment:
+      - NODE_ENV=local
+      - SERVICE_PORT=3001
+      # TOKEN must be in .env file
+      - VERCEL_TOKEN=${VERCEL_TOKEN}
+    ports:
+      - "3001:3001"
+    networks:
+      rgp-network:
+        aliases:
+          - cards.service.localhost
+
+    command: "npm run start-docker"
